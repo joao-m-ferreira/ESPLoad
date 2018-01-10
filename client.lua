@@ -40,7 +40,10 @@ print("fetch lua..")
 LoadX()
 
 wifi.setmode (wifi.STATION)
-wifi.sta.config(s.ssid, s.pwd)
+station_cfg={}
+station_cfg.ssid=s.ssid
+station_cfg.pwd=s.pwd
+wifi.sta.config(station_cfg)
 wifi.sta.autoconnect (1)
 
 iFail = 20
